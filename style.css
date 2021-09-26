@@ -1,0 +1,207 @@
+@font-face{
+  font-family: Raleway; 
+  src: url('fonts/Raleway-Bold.ttf') format('truetype');
+  /*font-size: 700;*/
+}
+
+@font-face{
+  font-family: Raleway;
+  src: url('fonts/Raleway-Regular.ttf') format('truetype');
+}
+*{
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+html{
+  --primary:  rgba(161,255, 107, 0.7);
+  --secondary: rgba(227, 152, 109, 0.4);
+}
+
+html, body{
+  font-family: Raleway;
+  font-size: 14px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  background: no-repeat center bottom/cover url(images/banniere-aedifia4-2.jpg);
+  height: 250px;
+  width: 100%;
+}
+
+.logo{
+  display: block;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.header-nav {
+  text-align: center;
+  background-color: var(--primary);
+  padding: 5px;
+}
+
+.header-nav a {
+  display: inline-block;
+  margin:0 12px;
+  color: rgba(123,122,126,1);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-nav a:hover {
+  color: rgb(0, 0, 0);
+  transition: color .3s;
+}
+
+.container{
+  display:block;
+  padding: 0 15px;
+  text-align: justify;
+  border: 1px solid transparent;
+  height: auto;
+  margin: 0 auto;
+}
+
+.footer{
+  background: var(--secondary);
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  clear: both;
+}
+
+.footer a{
+  text-decoration: none;
+}
+
+.footer a:hover{
+  text-decoration: underline;
+}
+
+.main-title {
+  text-align: center;
+  background-color: var(--secondary);
+  font-size: 20px;
+  padding:5px;
+}
+
+.main a{
+  font-weight: bolder;
+  color: rgba(123,122, 126, 0.8);
+}
+
+.main a:hover{
+  color: var(--primary);
+  transition: color .5s;
+  text-decoration: none;
+}
+
+.actualite {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  
+}
+
+.info{
+  display: inline-block;
+  /*animation-name:menu;
+  animation-delay: .5s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.info img:hover{
+  animation-play-state: paused;
+}
+
+@keyframes menu{
+  0%{transform: translateX(100%)
+  }
+  100%{transform: translateX(-250%)
+  }*/
+}
+
+.img-container{
+  width: calc(100% + 20px);
+  margin-right:-10px;
+  margin-left:-10px;
+  display:block;
+}
+
+form{
+  padding: 10px;
+}
+
+.post{
+  background-image: url(images/job.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  line-height:30px;
+  color: rgba(255, 255,255, 0.8);
+  font-weight: 600;
+  text-align: center;
+  width: calc(100% + 20px);
+  margin: 0 -10px 20px;
+}
+
+.contact{
+  background-image: url(images/coffee.jpg);
+  background-size: cover;
+  background-position: left;
+  width: 1050px;
+  padding: 50px 20px;
+  line-height: 30px;
+  text-align: center;
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.localisation iframe{ 
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width: 520px){
+  html, body{
+    font-size:18px;
+  }
+  .logo{
+    display: flex;
+    justify-content: center;
+  }
+  /*.header-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  }*/
+
+  .main{
+    width: 1050px;
+  }
+
+  .localisation iframe{
+    width: 1050px;
+  }
+
+  iframe{
+    height: 450px;
+    margin-right: -20px;
+  }
+}
